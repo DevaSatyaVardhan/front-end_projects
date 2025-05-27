@@ -1,0 +1,25 @@
+ body {
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: wwhite;
+    }
+
+    .game-wrapper {
+      background-color: rgba(95, 173, 246, 0.75);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(16, 1, 10, 0.5);
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+
+    canvas {
+      display: none;
+      background: #eeb7b7;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
