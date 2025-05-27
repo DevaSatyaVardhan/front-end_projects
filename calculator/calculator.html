@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 to-slate-800 flex items-center justify-center p-4">
+
+  <div class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg p-6 w-full max-w-sm text-white">
+    <h1 class="text-2xl font-semibold mb-4 text-center">🔢 Calculator</h1>
+    <input id="display" type="text" class="w-full bg-white/20 text-right text-2xl p-3 rounded mb-4 outline-none" readonly />
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="btn bg-red-500" onclick="clearDisplay()">C</button>
+      <button class="btn bg-gray-600" onclick="deleteLast()">←</button>
+      <button class="btn bg-indigo-500" onclick="appendValue('%')">%</button>
+      <button class="btn bg-indigo-500" onclick="appendValue('/')">÷</button>
+
+      <button class="btn" onclick="appendValue('7')">7</button>
+      <button class="btn" onclick="appendValue('8')">8</button>
+      <button class="btn" onclick="appendValue('9')">9</button>
+      <button class="btn bg-indigo-500" onclick="appendValue('*')">×</button>
+
+      <button class="btn" onclick="appendValue('4')">4</button>
+      <button class="btn" onclick="appendValue('5')">5</button>
+      <button class="btn" onclick="appendValue('6')">6</button>
+      <button class="btn bg-indigo-500" onclick="appendValue('-')">−</button>
+
+      <button class="btn" onclick="appendValue('1')">1</button>
+      <button class="btn" onclick="appendValue('2')">2</button>
+      <button class="btn" onclick="appendValue('3')">3</button>
+      <button class="btn bg-indigo-500" onclick="appendValue('+')">+</button>
+
+      <button class="btn col-span-2" onclick="appendValue('0')">0</button>
+      <button class="btn" onclick="appendValue('.')">.</button>
+      <button class="btn bg-green-500" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+</body>
+</html>
